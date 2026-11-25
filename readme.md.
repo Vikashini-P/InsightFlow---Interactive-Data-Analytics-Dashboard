@@ -1,0 +1,140 @@
+# InsightFlow – Interactive Data Analytics Dashboard
+
+**InsightFlow** is a web-based data analytics platform developed to transform raw e-commerce data into meaningful business insights through interactive visualizations and a user-friendly dashboard.
+
+The project combines website development and data analytics to help users understand business performance, sales trends, customer information, product categories, and regional insights.
+
+## Project Overview
+
+InsightFlow provides a professional website with an interactive analytics dashboard. It uses a Global E-commerce Sales dataset containing **2,000 records and 15 attributes** to present business information in a visual and understandable format.
+
+## Key Features
+
+- **Responsive Website:** User-friendly interface with structured navigation.
+- **Performance at a Glance:** Displays total sales, total profit, total orders, and customers.
+- **Interactive Data Visualization:** Presents business data through interactive charts.
+- **Sales Performance Analysis:** Visualizes monthly sales trends.
+- **Category Analysis:** Displays sales distribution across product categories.
+- **Regional Performance:** Provides insights into business performance across regions.
+- **Quick Insights:** Highlights important observations from the dataset.
+- **Customer Search:** Allows users to search for customer-related information.
+- **Light and Dark Theme:** Provides a comfortable viewing experience.
+
+## Dataset Description
+
+**Dataset:** Global E-commerce Sales Dataset
+
+- Total Records: 2,000
+- Total Attributes: 15
+- File Format: CSV
+
+### Dataset Attributes
+
+1. Order_ID
+2. Order_Date
+3. Customer_Name
+4. Customer_Segment
+5. Country
+6. Region
+7. Product_Category
+8. Product_Name
+9. Quantity
+10. Unit_Price
+11. Discount_Percent
+12. Total_Sales
+13. Shipping_Cost
+14. Profit
+15. Payment_Method
+
+## Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| HTML5 | Website structure |
+| CSS3 | Styling and responsive design |
+| JavaScript | Interactive functionality and data processing |
+| Chart.js | Interactive charts and visualizations |
+| CSV | Dataset storage |
+| Visual Studio Code | Development environment |
+
+## Website Modules
+
+- Home
+- About
+- Services
+- Solutions
+- Dashboard
+- Insights
+- Contact
+
+## Dashboard Sections
+
+**1. Performance at a Glance**
+
+Displays important business metrics such as total sales, profit, orders, and customers.
+
+**2. Track What Is Happening**
+
+Provides visualizations for monthly sales, sales by category, regional performance, and sales versus profit.
+
+**3. Quick Insights**
+
+Highlights important observations such as top-performing categories, regions, and average order value.
+
+**4. Find a Customer in Seconds**
+
+Provides customer search functionality to retrieve customer-related information from the dataset.
+
+## Project Structure
+
+```text
+InsightFlow/
+│
+├── css/
+├── data/
+│   └── global_ecommerce_sales.csv
+├── images/
+├── js/
+│
+├── index.html
+├── about.html
+├── services.html
+├── solutions.html
+├── dashboard.html
+├── insights.html
+├── contact.html
+│
+└── README.md
+```
+
+## ⚙️ How to Run the Project
+
+1. Download or clone this repository.
+2. Open the project folder in Visual Studio Code.
+3. Make sure the required project folders and CSV dataset are available.
+4. Open `index.html` using a web browser or Live Server.
+5. Navigate through the website and explore the interactive dashboard.
+
+## Project Objective
+
+The main objective of InsightFlow is to demonstrate how raw e-commerce data can be transformed into meaningful visual insights using web technologies and data visualization.
+
+## Future Enhancements
+
+- Database integration for managing larger datasets.
+- Real-time data updates.
+- Predictive analytics and machine learning.
+- Advanced business intelligence features.
+- Integration of additional datasets.
+
+## Developed By
+
+**Project Name:** InsightFlow – Interactive Data Analytics Dashboard
+
+**Domain:** Web Development and Data Analytics
+
+**Technologies:** HTML5, CSS3, JavaScript, Chart.js
+
+---
+
+⭐ *InsightFlow – Turning Business Data into Meaningful Insights for Smarter Decisions.*

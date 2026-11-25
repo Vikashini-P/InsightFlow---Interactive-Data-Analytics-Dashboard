@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | InsightFlow</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="navbar">
+    <div class="nav-container">
+
+        <a href="index.html" class="brand">
+
+            <img
+                src="images/logo/logo.png"
+                alt="InsightFlow Logo">
+
+            <div class="brand-text">
+
+                <span class="brand-name">
+                    InsightFlow
+                </span>
+
+                
+
+            </div>
+
+        </a>
+
+
+        <nav class="nav-menu">
+
+            <a href="index.html" class="nav-link">
+                Home
+            </a>
+
+            <a href="about.html" class="nav-link">
+                About
+            </a>
+
+            <a href="services.html" class="nav-link">
+                Services
+            </a>
+
+            <a href="solutions.html" class="nav-link">
+                Solutions
+            </a>
+
+            <a href="dashboard.html" class="nav-link active">
+                Dashboard
+            </a>
+
+            <a href="insights.html" class="nav-link">
+                Insights
+            </a>
+
+        
+
+            <a href="contact.html" class="nav-link">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+            <button
+                class="theme-toggle"
+                id="themeToggle"
+                type="button"
+                aria-label="Toggle theme">
+
+                <span id="themeIcon">☾</span>
+
+            </button>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open menu">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </div>
+</header>
+
+
+<!-- =====================================================
+     DASHBOARD HERO
+===================================================== -->
+
+<section class="dashboard-hero">
+
+    <div class="page-container dashboard-hero-grid">
+
+
+        <!-- LEFT -->
+
+        <div class="dashboard-hero-content">
+
+            <span class="eyebrow">
+                INSIGHTFLOW ANALYTICS
+            </span>
+
+
+            <h1>
+                Understand your
+                <span>business</span>
+                at a glance.
+            </h1>
+
+
+            <p>
+                Explore sales, profit, customer and regional
+                performance through an interactive analytics
+                dashboard built directly into InsightFlow.
+            </p>
+
+
+            <div class="hero-tags">
+
+                <span>
+                    Live Data
+                </span>
+
+                <span>
+                    Interactive
+                </span>
+
+                <span>
+                    Data Driven
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT ANALYTICS PREVIEW -->
+
+        <div class="dashboard-preview">
+
+
+            <div class="preview-top">
+
+                <div>
+
+                    <small>
+                        BUSINESS OVERVIEW
+                    </small>
+
+                    <h3>
+                        Performance
+                    </h3>
+
+                </div>
+
+
+                <span class="live-badge">
+
+                    <i></i>
+                    Live
+
+                </span>
+
+            </div>
+
+
+            <div class="preview-kpis">
+
+
+                <div class="preview-kpi">
+
+                    <small>
+                        Total Sales
+                    </small>
+
+                    <strong id="heroSales">
+                        $0
+                    </strong>
+
+                </div>
+
+
+                <div class="preview-kpi">
+
+                    <small>
+                        Total Profit
+                    </small>
+
+                    <strong id="heroProfit">
+                        $0
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="preview-chart">
+
+                <span style="height:32%"></span>
+                <span style="height:47%"></span>
+                <span style="height:38%"></span>
+                <span style="height:58%"></span>
+                <span style="height:53%"></span>
+                <span style="height:69%"></span>
+                <span style="height:82%"></span>
+
+            </div>
+
+
+            <div class="preview-footer">
+
+                <span>
+                    Business Growth
+                </span>
+
+                <strong>
+                    ↑ Positive
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PERFORMANCE SECTION
+===================================================== -->
+
+<section class="performance-section">
+
+    <div class="page-container">
+
+
+        <div class="section-heading-row">
+
+            <div>
+
+                <span class="eyebrow">
+                    BUSINESS ANALYTICS
+                </span>
+
+                <h2>
+                    Performance at a glance.
+                </h2>
+
+                <p>
+                    Select filters below to explore business
+                    performance across different dimensions.
+                </p>
+
+            </div>
+
+
+            <div
+                class="dataset-status"
+                id="datasetStatus">
+
+                <span></span>
+                Loading dataset...
+
+            </div>
+
+        </div>
+
+
+        <!-- FILTER PANEL -->
+
+        <div class="filter-panel">
+
+
+            <div class="filter-intro">
+
+                <div class="filter-icon">
+                    ✦
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Explore the data
+                    </strong>
+
+                    <small>
+                        Adjust filters to update the dashboard
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="filter-group">
+
+                <label for="regionFilter">
+                    REGION
+                </label>
+
+                <select id="regionFilter">
+
+                    <option value="all">
+                        All Regions
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="filter-group">
+
+                <label for="categoryFilter">
+                    CATEGORY
+                </label>
+
+                <select id="categoryFilter">
+
+                    <option value="all">
+                        All Categories
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="filter-group">
+
+                <label for="segmentFilter">
+                    SEGMENT
+                </label>
+
+                <select id="segmentFilter">
+
+                    <option value="all">
+                        All Segments
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button
+                class="reset-button"
+                id="resetFilters"
+                type="button">
+
+                Reset
+
+            </button>
+
+        </div>
+
+
+        <!-- KPI CARDS -->
+
+        <div class="kpi-grid">
+
+
+            <article class="kpi-card">
+
+                <div class="kpi-icon sales-icon">
+                    $
+                </div>
+
+                <div class="kpi-content">
+
+                    <small>
+                        Total Sales
+                    </small>
+
+                    <strong id="totalSales">
+                        $0
+                    </strong>
+
+                    <span>
+                        Overall sales
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="kpi-card">
+
+                <div class="kpi-icon profit-icon">
+                    ↗
+                </div>
+
+                <div class="kpi-content">
+
+                    <small>
+                        Total Profit
+                    </small>
+
+                    <strong id="totalProfit">
+                        $0
+                    </strong>
+
+                    <span>
+                        Overall profit
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="kpi-card">
+
+                <div class="kpi-icon order-icon">
+                    #
+                </div>
+
+                <div class="kpi-content">
+
+                    <small>
+                        Total Orders
+                    </small>
+
+                    <strong id="totalOrders">
+                        0
+                    </strong>
+
+                    <span>
+                        Unique orders
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="kpi-card">
+
+                <div class="kpi-icon customer-icon">
+                    ◉
+                </div>
+
+                <div class="kpi-content">
+
+                    <small>
+                        Customers
+                    </small>
+
+                    <strong id="totalCustomers">
+                        0
+                    </strong>
+
+                    <span>
+                        Unique customers
+                    </span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SALES PERFORMANCE
+===================================================== -->
+
+<section class="charts-section">
+
+    <div class="page-container">
+
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                SALES PERFORMANCE
+            </span>
+
+            <h2>
+                Track what is happening.
+            </h2>
+
+            <p>
+                Understand sales movement and category
+                contribution through interactive visualizations.
+            </p>
+
+        </div>
+
+
+        <div class="chart-grid chart-grid-top">
+
+
+            <!-- MONTHLY SALES -->
+
+            <article class="chart-card chart-large">
+
+                <div class="chart-card-header">
+
+                    <div>
+
+                        <small>
+                            SALES TREND
+                        </small>
+
+                        <h3>
+                            Monthly Sales
+                        </h3>
+
+                    </div>
+
+                    <span class="chart-tag">
+                        Monthly
+                    </span>
+
+                </div>
+
+
+                <div class="chart-wrapper">
+
+                    <canvas id="salesTrendChart"></canvas>
+
+                </div>
+
+            </article>
+
+
+            <!-- SALES BY CATEGORY -->
+
+            <article class="chart-card">
+
+                <div class="chart-card-header">
+
+                    <div>
+
+                        <small>
+                            CATEGORY ANALYTICS
+                        </small>
+
+                        <h3>
+                            Sales by Category
+                        </h3>
+
+                    </div>
+
+                    <span class="chart-mini-icon">
+                        ●
+                    </span>
+
+                </div>
+
+
+                <div class="chart-wrapper">
+
+                    <canvas id="categoryChart"></canvas>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <div class="chart-grid chart-grid-bottom">
+
+
+            <!-- REGIONAL PERFORMANCE -->
+
+            <article class="chart-card">
+
+                <div class="chart-card-header">
+
+                    <div>
+
+                        <small>
+                            GEOGRAPHIC ANALYTICS
+                        </small>
+
+                        <h3>
+                            Regional Performance
+                        </h3>
+
+                    </div>
+
+                    <span class="chart-mini-icon">
+                        ◎
+                    </span>
+
+                </div>
+
+
+                <div class="chart-wrapper">
+
+                    <canvas id="regionChart"></canvas>
+
+                </div>
+
+            </article>
+
+
+            <!-- SALES VS PROFIT -->
+
+            <article class="chart-card">
+
+                <div class="chart-card-header">
+
+                    <div>
+
+                        <small>
+                            PROFITABILITY
+                        </small>
+
+                        <h3>
+                            Sales vs Profit
+                        </h3>
+
+                    </div>
+
+                    <span class="chart-mini-icon">
+                        ↗
+                    </span>
+
+                </div>
+
+
+                <div class="chart-wrapper">
+
+                    <canvas id="profitChart"></canvas>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     QUICK INSIGHTS
+===================================================== -->
+
+<section class="insights-preview-section">
+
+    <div class="page-container">
+
+
+        <div class="insights-heading-row">
+
+            <div>
+
+                <span class="eyebrow">
+                    QUICK INSIGHTS
+                </span>
+
+                <h2>
+                    What is happening in your data?
+                </h2>
+
+                <p>
+                    Important observations are highlighted
+                    automatically from the selected dataset.
+                </p>
+
+            </div>
+
+
+            <a
+                href="insights.html"
+                class="text-link">
+
+                View all insights →
+
+            </a>
+
+        </div>
+
+
+        <div class="insight-cards">
+
+
+            <article class="insight-card">
+
+                <span class="insight-number">
+                    01
+                </span>
+
+                <small>
+                    TOP CATEGORY
+                </small>
+
+                <h3 id="topCategory">
+                    —
+                </h3>
+
+                <p>
+                    Highest sales contribution
+                </p>
+
+            </article>
+
+
+            <article class="insight-card">
+
+                <span class="insight-number">
+                    02
+                </span>
+
+                <small>
+                    TOP REGION
+                </small>
+
+                <h3 id="topRegion">
+                    —
+                </h3>
+
+                <p>
+                    Strongest regional performance
+                </p>
+
+            </article>
+
+
+            <article class="insight-card">
+
+                <span class="insight-number">
+                    03
+                </span>
+
+                <small>
+                    AVERAGE ORDER VALUE
+                </small>
+
+                <h3 id="averageOrder">
+                    $0
+                </h3>
+
+                <p>
+                    Average value per order
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CUSTOMER ANALYTICS
+===================================================== -->
+
+<section class="customer-section">
+
+    <div class="page-container">
+
+
+        <div class="customer-heading-row">
+
+            <div>
+
+                <span class="eyebrow">
+                    CUSTOMER ANALYTICS
+                </span>
+
+                <h2>
+                    Find a customer in seconds.
+                </h2>
+
+                <p>
+                    Search the customer dataset and instantly
+                    retrieve sales, profit, orders and regional information.
+                </p>
+
+            </div>
+
+
+
+        </div>
+
+
+        <!-- CUSTOMER SEARCH -->
+
+        <div class="customer-search-box">
+
+            <div class="search-label">
+                CUSTOMER NAME
+            </div>
+
+
+            <div class="search-row">
+
+                <div class="search-input-wrapper">
+
+                    <span>
+                        ⌕
+                    </span>
+
+                    <input
+                        type="text"
+                        id="customerSearch"
+                        placeholder="Start typing a customer name..."
+                        autocomplete="off">
+
+
+                    <div
+                        id="customerSuggestions"
+                        class="customer-suggestions">
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="customerSearchButton"
+                    class="search-button"
+                    type="button">
+
+                    Search →
+
+                </button>
+
+            </div>
+
+
+            <p
+                id="customerMessage"
+                class="customer-message">
+            </p>
+
+        </div>
+
+
+        <!-- CUSTOMER RESULT -->
+
+        <div
+            id="customerResult"
+            class="customer-result hidden">
+
+
+            <div class="customer-result-main">
+
+                <span class="eyebrow">
+                    CUSTOMER PROFILE
+                </span>
+
+                <h3 id="resultName">
+                    Customer
+                </h3>
+
+                <p id="resultId">
+                    —
+                </p>
+
+            </div>
+
+
+            <div class="customer-result-stat">
+
+                <small>
+                    SALES
+                </small>
+
+                <strong id="resultSales">
+                    $0
+                </strong>
+
+            </div>
+
+
+            <div class="customer-result-stat">
+
+                <small>
+                    PROFIT
+                </small>
+
+                <strong id="resultProfit">
+                    $0
+                </strong>
+
+            </div>
+
+
+            <div class="customer-result-stat">
+
+                <small>
+                    ORDERS
+                </small>
+
+                <strong id="resultOrders">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="customer-result-stat">
+
+                <small>
+                    REGION
+                </small>
+
+                <strong id="resultRegion">
+                    —
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+
+        <div class="customer-quick-links">
+
+
+            <a href="insights.html">
+
+                <span>
+                    ✦
+                </span>
+
+                <div>
+
+                    <small>
+                        BUSINESS INSIGHTS
+                    </small>
+
+                    <strong>
+                        Explore deeper findings
+                    </strong>
+
+                </div>
+
+                <b>
+                    →
+                </b>
+
+            </a>
+
+
+            
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="dashboard-cta">
+
+    <div class="page-container dashboard-cta-inner">
+
+
+        <div>
+
+            <span class="eyebrow">
+                DATA • INSIGHTS • DECISIONS
+            </span>
+
+
+            <h2>
+                Turn every number
+                <span>into a better decision.</span>
+            </h2>
+
+
+            <p>
+                InsightFlow brings business information together
+                so important patterns become easier to understand.
+            </p>
+
+        </div>
+
+
+        <a
+            href="insights.html"
+            class="cta-button">
+
+            Explore Insights →
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+
+        <div class="footer-brand">
+
+            <a
+                href="index.html"
+                class="brand">
+
+                <img
+                    src="images/logo/logo.png"
+                    alt="InsightFlow Logo">
+
+
+                <div class="brand-text">
+
+                    <span class="brand-name">
+                        InsightFlow
+                    </span>
+
+                    
+
+                </div>
+
+            </a>
+
+
+            <p>
+                Turning business data into meaningful insights
+                for smarter decisions.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+
+            <div>
+
+                <h4>
+                    Explore
+                </h4>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="solutions.html">
+                    Solutions
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Analytics
+                </h4>
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="insights.html">
+                    Insights
+                </a>
+
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Connect
+                </h4>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 InsightFlow 
+        </span>
+
+        <span>
+            Data • Insights • Decisions
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
